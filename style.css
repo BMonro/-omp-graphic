@@ -130,10 +130,14 @@ header nav {
 
 .convert-type-label {
     display: block; 
-    margin-top: 15px; 
+    margin-top: 5px; 
     text-align: left; 
+    font-weight: 700;
     margin-left: 80px;
+    /*-webkit-text-stroke: 0.5px #39342d; */
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.7); 
 }
+
 
 .control-panel{
     border-right: 1px solid #39342d;
