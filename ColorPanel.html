@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Color Panel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="top-menu">
+        <nav>
+            <div class="logo">Color editor</div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="control-panel">
+            <div class="downloudCanvas">
+                <canvas id="myCanvas" width="300" height="170" style="background-color: #e2e6e7; border: 1px solid #000;"></canvas>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            
+            <label class="convert-type-label"> Choose convert type: </label>
+            <button class="imageConvert">Convert image</button>
+            
+            <label class="convert-type-label"> Choose compared images: </label>
+            <div class = "compareButtons">
+                <button class="xyzCompare">Compare with XYZ</button>
+                <button class= "rgbCompare">Compare with RGB</button>
+            </div>
+            <label class="labels"> </label>
+
+            <label class="convert-type-label"> Set colors: </label>
+            <div class="colorBalance">
+                <label for="redSlider">Red:</label>
+                <input type="range" min="0" max="1" value="1" step="0.01" id="redSlider" oninput="outputUpdateDepth(value)" style="width: 230px;">
+                <br>
+                
+                <label for="greenSlider">Green:</label>
+                <input type="range" min="0" max="1" value="1" step="0.01" id="greenSlider" oninput="outputUpdateDepth(value)" style="width: 230px;">
+                <br>
+                
+                <label for="blueSlider">Blue:</label>
+                <input type="range" min="0" max="1" value="1" step="0.01" id="blueSlider" oninput="outputUpdateDepth(value)" style="width: 230px;">                
+            </div>
+
+            <label class="convert-type-label" for="saturation">Change orange saturation:</label>
+                <input type="range" min="-1" max="1" value="1" step="0.001" id="saturation" oninput="outputUpdateSaturation(value)" style="width: 230px;">
+        </div>
+        <div class="right-pannel">
+            <div class="canvases">
+            
+                <div class="first">
+                    <label>XYZ</label>
+                    <canvas id="myCanvasXYZ" width="500" height="300" style="background-color: #e2e6e7; border: 1px solid #000;"></canvas>
+                    
+                
+                </div>
+                <div class="second">
+                    <label>RGB</label>
+                    <canvas id="myCanvasRGB" width="500" height="300" style="background-color: #e2e6e7; border: 1px solid #000;"></canvas>
+                    
+                </div>
+            </div>
+            <div class ="pannel">
+                <div class="first">
+                    <label class="xyzPixelInfo"></label>
+                    
+                </div>
+                <div class="second">
+                    <label class="rgbPixelInfo"></label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+        
+    
+   
+    <script src="script.js"></script>
+</body>
+
+</html>

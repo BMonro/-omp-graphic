@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #839788;
+    color: #e6e1da;
+    font-weight: 500;
+    background-position: center;
+    background-size:cover;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 150%;
+    font-weight: 600;
+}
+
+nav ul li {
+    position: relative;
+    float: left;
+    list-style: none;
+    padding: 10px;
+    font-size: 140%;
+}
+
+nav ul li a{
+    list-style: none;
+    padding: 10px;
+    text-decoration: none; 
+    color:#EEE0CB;
+}
+
+
+.top-menu {
+    margin-bottom: 5%;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:#5b5149;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 2%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30% 70%;   
+}
+
+.right-pannel{
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+.right-pannel .pannel{
+    display: grid;
+    margin-top: 40px;
+    margin-left: 30px;
+    grid-template-columns: 50% 50%;
+}
+.right-pannel .canvases {
+    display: grid;
+    margin-left: 30px;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;           
+}
+
+.right-pannel .canvases .first{
+    display: grid;
+    grid-template-rows: 7% 93%;
+    position: flex;
+}
+
+.right-pannel .canvases .first label{
+    align-items: flex-start;
+    margin-left: 0px ;
+    margin-right: 500px;
+}
+
+.right-pannel .canvases .second{
+    display: grid;
+    grid-template-rows: 7% 93%;
+    position: flex;
+}
+
+.right-pannel .canvases .second label{
+    align-items: flex-start;
+    margin-left: 0px ;
+    margin-right: 500px;
+}
+
+.convertButtons button{
+    background-color: #5b5149;
+    color:antiquewhite;
+    padding: 4px 19px;
+    border-radius: 4px;
+    margin: 10px;
+
+}
+
+.convertButtons button:hover{
+    background-color: #39342d;
+}
+
+.compareButtons button{
+    background-color: #5b5149;
+    color:antiquewhite;
+    padding: 4px 19px;
+    border-radius: 4px;
+    margin: 10px;
+
+}
+
+.compareButtons button:hover{
+    background-color: #39342d;
+}
+
+.convert-type-label {
+    display: block; 
+    margin-top: 15px; 
+    text-align: left; 
+    margin-left: 80px;
+}
+
+.control-panel{
+    border-right: 1px solid #39342d;
+}
+
+.imageConvert{
+    background-color: #5b5149;
+    color:antiquewhite;
+    padding: 4px 19px;
+    border-radius: 4px;
+    margin: 10px;
+
+}
+
+.labels{
+    font-size:100%;
+    font-weight: 60;
+    line-height: -1; 
+}
+
+.colorBalance{
+    display: block; 
+    margin-top: 10px; 
+    font-weight: 60;
+    text-align: left; 
+    margin-left: 110px;
+
+}
+.colorBalance .range{
+    
+    position: absolute;
+}
+
+.pannel .convert-type-label-or {
+    margin-left: 10px; /* лівий відступ */
+    text-align: left; /* вирівнювання тексту ліворуч */
+}
