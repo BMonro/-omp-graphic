@@ -78,7 +78,6 @@ function convertImage() {
         const pixelColorXYZ = `${imageData.data[0]}, ${imageData.data[1]}, ${imageData.data[2]}`;
         const pixelColorRGB = `${Math.round(r * 255)}, ${Math.round(g * 255)}, ${Math.round(b * 255)}`;
 
-        // Convert RGB to hex
         const hexColor = rgbToHex(imageData.data[0], imageData.data[1], imageData.data[2]);
 
         xyzPixelInfoLabel.innerHTML = `Координати: (${x}, ${y}), <br> Колір (XYZ): ${pixelColorXYZ}, <br> Колір (RGB): ${pixelColorRGB} 
@@ -117,7 +116,6 @@ function convertImage() {
         const pixelColorXYZ = `${Math.round(X * 255)}, ${Math.round(Y * 255)}, ${Math.round(Z * 255)}`;
         const pixelColorRGB = `${imageData.data[0]}, ${imageData.data[1]}, ${imageData.data[2]}`;
 
-        // Convert RGB to hex
         const hexColor = rgbToHex(imageData.data[0], imageData.data[1], imageData.data[2]);
 
         rgbPixelInfoLabel.innerHTML = `Координати: (${x}, ${y}), <br> Колір (RGB): ${pixelColorRGB}, <br> Колір (XYZ): ${pixelColorXYZ} 
@@ -306,7 +304,7 @@ function changeOrangeSaturationRGB() {
 
         console.log(`${hsv}`); 
 
-        if ((hsv[0] >= 0.02 && hsv[0] <= 0.09)) {
+        if ((hsv[0] >= 0.03 && hsv[0] <= 0.010)) {
             hsv[1] = saturationChange;
             hsv[1] = Math.max(0, Math.min(1, hsv[1])); 
         }
@@ -346,7 +344,7 @@ function changeOrangeSaturationXYZ() {
 
         let hsv = rgbToHsv(r, g, b);
 
-        if ((hsv[0] >= 0.02 && hsv[0] <= 0.09)) {
+        if ((hsv[0] >= 0.03 && hsv[0] <= 0.09)) {
             hsv[1] = saturationChange;
             hsv[1] = Math.max(0, Math.min(1, hsv[1])); 
         }
